@@ -1,2 +1,2 @@
-# games-integration
-This repo is a study about Next.js with an integration to other API`s.
+# Portfolio
+This repo is a study about Next.js and vercel, creating my own portfolio for test :)
