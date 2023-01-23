@@ -1,5 +1,22 @@
-function HelloWorld() {
-    return <div>Hello World!</div>
+export default function HelloWorld({about}) {
+    const aboutString =  JSON.stringify(about);
+    return (
+        <div>
+            <h1>{about.name}</h1>
+            <h1>Nick = {about.nickName}</h1>
+            <h1>JSONStringFy = {aboutString}</h1>
+        </div>
+    )
 }
 
-export default HelloWorld
+export async function getStaticProps(context) {
+    const result = await fetch(`http://localhost:3000/api/about`);
+    const json = await result.json();
+    
+    return {
+        props: {
+            about: json.about
+        },
+        revalidate: 86400, //Day in seconds
+    };
+}
