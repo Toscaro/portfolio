@@ -18,8 +18,9 @@
   },
   "homepage": "https://github.com/Toscaro/games-integration#readme",
   "dependencies": {
-    "next": "^10.0.5",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1"
+    "eslint-config-next": "^13.1.4",
+    "next": "^13.1.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   }
 }
