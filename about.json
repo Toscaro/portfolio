@@ -1,9 +1,9 @@
 {
-    "name":"Lucas Toscaro Cabral",
+    "name":"Lucas Test fake data",
     "nickName":"Toscaro",
     "email":"lucas@toscaro.com.br",
-    "secondaryEmail":"lucastcabral17@gmail",
-    "age":"21",
-    "phoneNumber":"+55 (19) 98327-1028",
-    "secondaryPhoneNumber":"+55 (19) 99731-8754"
+    "secondaryEmail":"example@example",
+    "age":"123",
+    "phoneNumber":"+55 (99) 9999-9999",
+    "secondaryPhoneNumber":"+55 (88) 98888-8888"
 }
