@@ -1,11 +1,12 @@
 import React from "react";
 import { GetStaticProps } from "next/types";
+import { getAbout } from "../lib/data-interface";
 
-export default function HelloWorld({about}) {
+export default function Home({about}) {
     const aboutString =  JSON.stringify(about);
     return (
         <div>
-            <h1>{about.name}</h1>
+            <h1>Name = {about.name}</h1>
             <h1>Nick = {about.nickName}</h1>
             <h1>JSONStringFy = {aboutString}</h1>
         </div>
@@ -13,12 +14,11 @@ export default function HelloWorld({about}) {
 }
 
 export const getStaticProps: GetStaticProps = async() => {
-    const result = await fetch(`http://localhost:3000/api/about`);
-    const json = await result.json();
-    
+    const about = await getAbout();
+
     return {
         props: {
-            about: json.about
+            about: about
         },
         revalidate: 86400, //Day in seconds
     };
